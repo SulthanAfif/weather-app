@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Weather App</h1>
+            <button id="darkModeToggle" class="dark-mode-btn">🌙</button>
+        </header>
+
+        <form id="searchForm">
+            <input 
+                type="text" 
+                id="cityInput" 
+                placeholder="Masukkan nama kota..." 
+                autocomplete="off"
+                required
+            >
+            <button type="submit">Cari</button>
+        </form>
+
+        <div id="loading" class="loading hidden">
+            <div class="spinner"></div>
+            <p>Memuat data cuaca...</p>
+        </div>
+
+        <div id="error" class="error hidden"></div>
+
+        <div id="weatherCard" class="weather-card hidden">
+            <div class="weather-header">
+                <h2 id="cityName">-</h2>
+                <p id="date">-</p>
+            </div>
+
+            <div class="weather-main">
+                <img id="weatherIcon" src="" alt="Weather Icon">
+                <div class="temp-box">
+                    <h1 id="temperature">-</h1>
+                    <p id="description">-</p>
+                </div>
+            </div>
+
+            <div class="weather-details">
+                <div class="detail-item">
+                    <span class="label">Terasa seperti</span>
+                    <span id="feelsLike">-</span>
+                </div>
+                <div class="detail-item">
+                    <span class="label">Kelembapan</span>
+                    <span id="humidity">-</span>
+                </div>
+                <div class="detail-item">
+                    <span class="label">Angin</span>
+                    <span id="wind">-</span>
+                </div>
+                <div class="detail-item">
+                    <span class="label">Tekanan</span>
+                    <span id="pressure">-</span>
+                </div>
+            </div>
+        </div>
+
+        <div id="historySection" class="history hidden">
+            <h3>Pencarian Terakhir</h3>
+            <div id="historyList" class="history-list"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
