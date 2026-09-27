@@ -1,4 +1,8 @@
-## belajar Frontend Development.
+## Belajar Frontend Development.
+
+## Live Demo
+
+https://weather-app-chi-ruddy-86.vercel.app/
 
 ---
 
